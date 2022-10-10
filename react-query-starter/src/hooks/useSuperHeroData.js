@@ -15,6 +15,7 @@ export const useSuperHeroData = (heroId) => {
   const queryClient = useQueryClient();
 
   return useQuery(["super-hero", heroId], () => fetchSuperHero(heroId), {
+    // First the initialData will be shown from "already existing data" afterwards the fetched data will be shown
     initialData: () => {
       // get data of the query with 'super-heroes' key
       const hero = queryClient
