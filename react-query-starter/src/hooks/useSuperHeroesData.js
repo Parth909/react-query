@@ -22,6 +22,8 @@ export const useSuperHeroesData = (onSuccess, onError) => {
     onSuccess,
     onError,
     enabled: true,
+    // Method called after successful execution to modify the data.
+    // Although the full data will be stored, return only selected keys to be used in the UI
     // select: (data) => {
     //   const superHeroNames = data.data.map((hero) => hero.name);
     //   return superHeroNames;
